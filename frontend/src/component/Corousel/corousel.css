@@ -1,0 +1,92 @@
+.corousel {
+  /* font-family: 'Yeseva One', cursive; */
+  font-family: "Playfair Display", serif;
+  /* font-style: italic; */
+  font-weight: 400;
+ 
+}
+.corousel .item {
+  height: 500px;
+}
+.corousel .item .corousel-img {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+}
+.corousel .item .caption h1 {
+  font-size: 7.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+.corousel .item .caption p {
+  padding: 0;
+  margin: 0;
+  font-size: 45px;
+  text-shadow: 2px 2px 2px black;
+}
+span {
+  color: rgb(212, 175, 55);
+}
+.caption img {
+  height: 35rem;
+  opacity: 0.8;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;
+}
+.caption img:hover {
+  /* height: 38rem; */
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
+#search{
+  width: 60%;
+  align-items: center;
+  background-color: rgb(245, 241, 189);
+  height:40%;
+  border-radius: 5%;
+  border-color: rgb(67, 65, 65);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align:center;
+  font-family:"poppins";
+  /* margin-top:0%;
+  margin-bottom: 1rem; */
+
+
+}
+ 
+
+.carousel {
+  font-family: "Playfair Display", serif;
+}
+
+.carousel .item {
+  height: 500px;
+}
+
+.carousel .item .carousel-img {
+  object-fit: cover; /* Ensures the image covers the area */
+  height: 100%; /* Adjust to keep images responsive */
+}
+
+.carousel .item .caption h1 {
+  font-size: 7.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+.carousel .item .caption p {
+  margin: 0;
+  font-size: 45px;
+  text-shadow: 2px 2px 2px black;
+}
+
+span {
+  color: rgb(212, 175, 55);
+}
+

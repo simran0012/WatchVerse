@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.greenColor {
+  color: green !important;
+}
+.redColor {
+  color: red !important;
+}
+
+/* Courasel */
+.corousel {
+  /* font-family: 'Yeseva One', cursive; */
+  font-family: "Playfair Display", serif;
+  /* font-style: italic; */
+  font-weight: 400;
+}
+.corousel .item {
+  height: 500px;
+}
+.corousel .item .corousel-img {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+}
+.corousel .item .caption h1 {
+  font-size: 7.5rem;
+  text-shadow: 1px 1px 2px black;
+}
+.corousel .item .caption p {
+  padding: 0;
+  margin: 0;
+  font-size: 45px;
+  text-shadow: 2px 2px 2px black;
+}
