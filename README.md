@@ -11,20 +11,20 @@ Version Control: Git & GitHub
 
 Installation:
 1.Install backend dependencies:
-  cd Backend
+  cd Backend,
   npm install
 
 2.Install frontend dependencies:
-  cd ../frontend
+  cd ../frontend, 
   npm install
 
 Usage:
 1.Start the backend server:
-  cd Backend
+  cd Backend, 
   npm run dev
 
 2.Start the frontend:
-  cd frontend
+  cd frontend, 
   npm start
 
 Open http://localhost:3000 in your browser.
@@ -48,6 +48,7 @@ Here are the UI previews of the WatchVerse website, including the homepage, prod
 <img width="1920" height="868" alt="image" src="https://github.com/user-attachments/assets/74ebb762-8c49-4daa-be7b-c9203827fa6f" />
 
 <img width="1920" height="875" alt="image" src="https://github.com/user-attachments/assets/07549464-83b7-49fe-b5cf-790591e037ee" />
+
 
 
 
