@@ -14,7 +14,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link className={`productCard ${categoryClass}`} to={`/product/${product._id}`}>
-      <img src={product.images[0].url} alt={product.name} />
+      <img src={ product.images?.[0]?.url ||
+    "https://via.placeholder.com/300x300?text=No+Image"} alt={product.name} />
       <p>{product.name}</p>
       <div>
         <Rating {...options} />{" "}

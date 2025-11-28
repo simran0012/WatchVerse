@@ -11,14 +11,14 @@ import Typography from "@material-ui/core/Typography";
 import MetaData from "../layout/MetaData";
 import "./Search.css";
 
-const categories = ["Men", "Women", "Digital", "Analog"];
+const categories = ["Man", "Women", "Digital","Analog"];
 
 const Products = ({ match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 25000]);
+  const [price, setPrice] = useState([0, 8000]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [ratings, setRatings] = useState(0);
   const [searchTerm, setSearchTerm] = useState(""); // Local state for search term
@@ -38,10 +38,7 @@ const Products = ({ match }) => {
     setCurrentPage(e);
   };
 
-  const priceHandler = (event, newPrice) => {
-    setPrice(newPrice);
-  };
-
+  
   // This will be used to count the number of filtered products
   const filteredCount = filteredProductsCount || productsCount;
 
@@ -53,6 +50,7 @@ const Products = ({ match }) => {
 
     // Initially fetch all products (without filtering)
     dispatch(getProduct(keyword, currentPage, price, "", ratings));
+  
   }, [dispatch, keyword, currentPage, price, ratings, alert, error]);
 
   // Client-side filtering based on selected category with partial match support
@@ -68,7 +66,7 @@ const Products = ({ match }) => {
 
   // Local search filtering based on searchTerm
   const searchedProducts = filteredProducts.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    product.name?.toLowerCase().includes(searchTerm?.toLowerCase())
   );
 
   return (
@@ -93,7 +91,7 @@ const Products = ({ match }) => {
             </form>
           </Fragment>
 
-          <h2 className="productsHeading">Products</h2>
+          {/* <h2 className="productsHeading">Products</h2> */}
 
           <div className="products">
             {searchedProducts &&
@@ -103,15 +101,16 @@ const Products = ({ match }) => {
           </div>
 
           <div className="filterBox">
-            <Typography>Price</Typography>
+            {/* <Typography>Price</Typography>
             <Slider
               value={price}
-              onChange={priceHandler}
+              onChange={(e, newPrice) => {setPrice(newPrice)}}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={0}
-              max={25000}
-            />
+              max={8000}
+            /> */}
+       
 
             <Typography>Categories</Typography>
             <ul className="categoryBox">
@@ -132,7 +131,7 @@ const Products = ({ match }) => {
               ))}
             </ul>
 
-            <fieldset>
+           {/* <fieldset>
               <Typography component="legend">Ratings Above</Typography>
               <Slider
                 value={ratings}
@@ -144,7 +143,7 @@ const Products = ({ match }) => {
                 min={0}
                 max={5}
               />
-            </fieldset>
+            </fieldset> */}
           </div>
 
           {resultPerPage < filteredCount && (

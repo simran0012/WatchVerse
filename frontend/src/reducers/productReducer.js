@@ -34,14 +34,18 @@ import {
   CLEAR_ERRORS,
 } from "../constants/productConstants";
 
+
+
 export const productsReducer = (state = { products: [] }, action) => {
   switch (action.type) {
     case ALL_PRODUCT_REQUEST:
     case ADMIN_PRODUCT_REQUEST:
       return {
+        ...state,
         loading: true,
         products: [],
       };
+     
     case ALL_PRODUCT_SUCCESS:
       return {
         loading: false,

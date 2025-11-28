@@ -77,14 +77,15 @@
   background-color: rgba(0, 0, 0, 0.767);
 }
 
-.detailsBlock-3-1-1 > input {
-  border: none;
-  padding: 0.5vmax;
-  width: 1vmax;
-  text-align: center;
-  outline: none;
-  font: 400 0.8vmax "Roboto";
-  color: rgba(0, 0, 0, 0.74);
+.detailsBlock-3-1-1 >input{
+  border:none;
+  padding:0.5vmax;
+  width:1.5vmax;
+ text-align: left;
+ outline:none;
+ font: 400 0.8vmax "Roboto";
+ color:black
+  
 }
 
 .detailsBlock-3-1 > button:last-child {
@@ -92,7 +93,7 @@
   cursor: pointer;
   color: white;
   transition: all 0.5s;
-   background-color:tomato;;
+  background-color: tomato;
   font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.5vmax 2vmax;
@@ -120,12 +121,12 @@
 
 .detailsBlock-4 > p {
   color: rgba(0, 0, 0, 0.534);
-  font: 300 0.8vmax sans-serif;
+  font: 300 1vmax sans-serif;
 }
 
 .submitReview {
   border: none;
-   background-color:tomato;;
+  background-color: tomato;
   font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.6vmax 2vmax;
@@ -188,7 +189,7 @@
 }
 .reviewCardComment {
   color: rgba(0, 0, 0, 0.445);
-  font: 700 0.9vmax cursive;
+  font: 300 0.8vmax cursive;
 }
 
 .noReviews {

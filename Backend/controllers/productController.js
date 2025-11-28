@@ -21,7 +21,7 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
   });
 });
 
- //Get All Product
+ // Get All Product
  exports.getAllProducts = catchAsyncErrors (async(req,res)=>{
   const resultPerPage = 5;
   const productsCount = await Product.countDocuments();
@@ -34,6 +34,8 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
         products,
     })
  });
+
+
 
 
 // Get All Products with Search
@@ -88,6 +90,16 @@ exports.getProductDetails = catchAsyncErrors (async (req, res, next) => {
    
   });
 }),
+
+// Get All Products -- Admin
+exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
+  const products = await Product.find();
+
+  res.status(200).json({
+    success: true,
+    products,
+  });
+});
 
 
 

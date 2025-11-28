@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import Search from '../../Product/Search';
 
 const Navbar = () => {
   const navStyle = {
@@ -10,7 +9,6 @@ const Navbar = () => {
     backgroundColor: '#f8f9fa',
     padding: '10px 20px',
   };
-
   const linkStyle = {
     margin: '0 15px',
      color:'#913831',
@@ -28,7 +26,6 @@ const Navbar = () => {
      fontWeight:'600',
     cursor: 'pointer',
   };
-
   const dropdownMenuStyle = {
     position: 'absolute',
     backgroundColor: 'white',
@@ -36,8 +33,6 @@ const Navbar = () => {
     display: 'none',
     zIndex: 1,
   };
-
-
   return (
     <nav style={navStyle}>
       <a href="#" style={{ fontSize: '24px', fontWeight: 'bold',textDecoration:'none',color:'#913831' }}>WatchVerse</a>

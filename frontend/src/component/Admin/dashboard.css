@@ -1,17 +1,15 @@
 .dashboard {
   width: 100vw;
   max-width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  position: absolute;
+  display: block;
+  grid-template-columns: 240px 1fr;  
+  position: relative;
 }
 
 .dashboardContainer {
-  border-left: 1px solid rgba(0, 0, 0, 0.13);
-  background-color: rgb(255, 255, 255);
-  padding: 3rem 0;
+  margin-left: 240px;     /* SAME WIDTH AS SIDEBAR */
+  padding: 3rem;
 }
-
 .dashboardContainer > h1 {
   color: rgba(0, 0, 0, 0.733);
   font: 300 2rem "Roboto";

@@ -8,26 +8,41 @@ const cloudinary = require("cloudinary");
 
 // Register a User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
+  const { name, email, password,role, avatar } = req.body;
 
-   const myCloud= await cloudinary.v2.uploader.upload(req.body.avatar,{
-    folder:"avatars",
-    width:150,
-    crop:"scale",
-   })
-    const { name, email, password } = req.body;
+  let myCloud = {
+    public_id: "default_avatar",
+    secure_url: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
+  };
 
-    const user = await User.create({
-      name,
-      email,
-      password,
-      avatar: {
-        public_id: myCloud.public_id,
-        url: myCloud.secure_url,
-      },
-    })
-    sendToken(user, 201, res);
+  // If avatar is provided AND not empty string, then upload
+  if (avatar && avatar.trim() !== "") {
+    const uploaded = await cloudinary.v2.uploader.upload(avatar, {
+      folder: "avatars",
+      width: 150,
+      crop: "scale",
+    });
 
-    })
+    myCloud = {
+      public_id: uploaded.public_id,
+      secure_url: uploaded.secure_url,
+    };
+  }
+
+  const user = await User.create({
+    name,
+    email,
+    password,
+    avatar: {
+      public_id: myCloud.public_id,
+      url: myCloud.secure_url,
+    },
+      role: role || "user", 
+  });
+
+  sendToken(user, 201, res);
+});
+
 
     // Login User
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
