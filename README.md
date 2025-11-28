@@ -1,5 +1,4 @@
-﻿# simran-project
-WatchVerse
+﻿# WatchVerse
 WatchVerse is a modern, curated e-commerce platform for watches, designed to provide a simple and seamless shopping experience.
 
 Tech Stack:
@@ -49,6 +48,7 @@ Here are the UI previews of the WatchVerse website, including the homepage, prod
 <img width="1920" height="868" alt="image" src="https://github.com/user-attachments/assets/74ebb762-8c49-4daa-be7b-c9203827fa6f" />
 
 <img width="1920" height="875" alt="image" src="https://github.com/user-attachments/assets/07549464-83b7-49fe-b5cf-790591e037ee" />
+
 
 
 
